@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Scoreboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cricket Scoreboard</h1>
+        </header>
+        
+        <div class="scoreboard">
+            <div class="team-score">
+                <h2>Team Score: <span id="team-score">0/0</span></h2>
+                <h3>Overs: <span id="overs">0.0</span></h3>
+            </div>
+            
+            <div class="player-scores">
+                <div class="player" id="rahul">
+                    <h3>Rahul: <span id="rahul-score">0</span><span id="rahul-strike">*</span></h3>
+                </div>
+                <div class="player" id="rohit">
+                    <h3>Rohit: <span id="rohit-score">0</span><span id="rohit-strike"></span></h3>
+                </div>
+            </div>
+            
+            <div class="status">
+                <p id="status-message">Match started. Rahul on strike.</p>
+                <p id="free-hit-indicator" class="hidden">FREE HIT!</p>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <h3>Runs</h3>
+            <div class="button-group">
+                <button class="btn run-btn" data-runs="1">1 Run</button>
+                <button class="btn run-btn" data-runs="2">2 Runs</button>
+                <button class="btn run-btn" data-runs="3">3 Runs</button>
+                <button class="btn run-btn" data-runs="4">4 Runs</button>
+                <button class="btn run-btn" data-runs="6">6 Runs</button>
+            </div>
+            
+            <h3>Extras & Wickets</h3>
+            <div class="button-group">
+                <button class="btn extra-btn" data-type="wide">Wide</button>
+                <button class="btn extra-btn" data-type="noball">No Ball</button>
+                <button class="btn extra-btn" data-type="bye">Bye</button>
+                <button class="btn extra-btn" data-type="legbye">Leg Bye</button>
+                <button class="btn wicket-btn" data-type="wicket">Wicket</button>
+                <button class="btn wicket-btn" data-type="lbw">LBW</button>
+            </div>
+            
+            <h3>Special</h3>
+            <div class="button-group">
+                <button class="btn special-btn" id="free-hit-btn">Free Hit</button>
+                <button class="btn special-btn" id="switch-striker-btn">Switch Striker</button>
+                <button class="btn special-btn" id="reset-btn">Reset</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
